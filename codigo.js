@@ -91,17 +91,21 @@ const todo = () => {
 
 const manipulaBotao = () => {
     const texto = document.getElementById('senha').value;
-    if (hex_sha256(texto) === '13A028B3A63FB5B048C75ACA2C9FBE501AED65E6A333AFC8585D902B3B7EEBEC'){
+    if (hex_sha256(texto) === '13a028b3a63fb5b048c75aca2c9fbe501aed65e6a333afc8585d902b3b7eebec'){
         sessionStorage.setItem('logado', 'sim')
         document.getElementById("pagina-login").style.display = "none";
-        document.getElementById("pagina-principla").style.display = "block";
+        document.getElementById("pagina-principal").style.display = "block";
     }else{
         alert('vc errou a senha!')
     }
 };
 
+
 document.getElementById('all').onclick = todo;
 document.getElementById('feminino').onclick = jogadoras_femininos;
 document.getElementById('masculino').onclick = jogadores_masculinos;
 document.getElementById('botao').onclick = manipulaBotao;
-document.getElementById('logout').onclick = () => {sessionStorage.removeItem('logado')}
+document.getElementById('logout').onclick = () => {sessionStorage.removeItem('logado')
+    document.getElementById("pagina-principal").style.display = "none";
+    document.getElementById("pagina-login").style.display = "block";
+}

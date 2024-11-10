@@ -33,3 +33,9 @@ h1{
 #p1{
     color: black;
 }
+
+#pesquisa{
+    display: flex;
+    position: absolute;
+    margin-top: 2vh;
+}
