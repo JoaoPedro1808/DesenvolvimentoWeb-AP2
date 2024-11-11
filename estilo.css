@@ -1,3 +1,7 @@
+html{
+    background-color: rgb(163, 159, 159)
+}
+
 #container{
     display: flex;
     flex-wrap: wrap;
@@ -27,9 +31,34 @@ h1{
 }
 
 #titulo{
-    color: black
+    color: black;
+    text-align: center;
+    align-items: center;
+    font-family: 'rockwell';
+    margin-top: 20vh;
+    font-size: 50px;
 }
 
 #p1{
     color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#pagina-login{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#senha{
+    width: 30vw;
+    height: 2.9vh;
+    border-radius: 3em;
+}
+
+#botao{
+    color: white;
+    background-color: black;
+    border-radius: 3em;
 }
