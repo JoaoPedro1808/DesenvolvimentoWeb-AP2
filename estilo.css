@@ -7,6 +7,7 @@ html{
     flex-wrap: wrap;
     margin: 0% auto;
     margin-left: 2.6vw;
+    transition: 0.3 ease;
 }
 
 #container > article{
@@ -16,7 +17,14 @@ html{
     margin: .5rem;
     padding: .3rem;
     background-color: white;
+    transition: 0.3 ease;
 }
+
+#container > article:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 
 p{
     color: black;
@@ -45,8 +53,15 @@ h1{
     color: white;
     background-color: black;
     border-radius: 4px;
-    height: 3.4vh;
+    height: 4vh;
+    width: 6.5vw;
     font-family: 'rockwell';
+    transition: 0.3s ease;
+}
+
+#botao:hover{
+    color: black;
+    background-color: white;
 }
 
 #p1{
@@ -64,9 +79,10 @@ h1{
 
 #senha{
     width: 30vw;
-    height: 3.2vh;
+    height: 4.2vh;
     border-radius: 4px;
     border: 1px solid white;
+    font-family: 'rockwell';
 }
 
 #pagina-principal {
@@ -98,6 +114,7 @@ h1{
 }
 
 .botoes-principais {
+    display: flex;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -106,6 +123,12 @@ h1{
     color: white;
     border-radius: 4px;
     font-family: 'rockwell';
+    transition: 0.3s ease;
+}
+
+.botoes-principais:hover{
+    color: black;
+    background-color: white;
 }
 
 #logout{
@@ -119,6 +142,12 @@ h1{
     color: white;
     font-family: 'rockwell';
     border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+#logout:hover{
+    background-color: white;
+    color: black;
 }
 
 #titulo2{
@@ -130,3 +159,28 @@ h1{
     border-radius: 4px;
 }
 
+@media screen and (max-width: 768px) {
+    #pagina-login {
+        flex-direction: column;
+    }
+
+    #senha {
+        width: 80vw;
+        height: 6vh;
+        font-size: x-large;
+    }
+
+    #botao {
+        width: 40vw;
+        margin: 35px;
+        height: 8vh;
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .botoes-principais{
+        align-items: center;
+        flex-direction: column;
+    }
+}

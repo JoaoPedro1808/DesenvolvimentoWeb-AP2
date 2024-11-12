@@ -76,7 +76,7 @@ campo_pesquisa.addEventListener('input', (campo) => {
             (ele) => {
                 if (ele.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)) {
                     container.appendChild(montacard(ele));
-                } 
+                }
             }
         ));
     }
