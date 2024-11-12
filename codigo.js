@@ -64,10 +64,7 @@ campo_pesquisa.addEventListener('input', (campo) => {
         limparcontainer();
         copia_all1.then((r) => r.forEach(
             (ele) => {
-                if (ele.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)) {
-                    container.appendChild(montacard(ele));
-                }
-                if (ele.posicao.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)) {
+                if (ele.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)){
                     container.appendChild(montacard(ele));
                 }
             }
@@ -80,9 +77,6 @@ campo_pesquisa.addEventListener('input', (campo) => {
                 if (ele.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)) {
                     container.appendChild(montacard(ele));
                 } 
-                if (ele.posicao.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)) {
-                    container.appendChild(montacard(ele));
-                }
             }
         ));
     }
@@ -91,9 +85,6 @@ campo_pesquisa.addEventListener('input', (campo) => {
         copia_feminino1.then((r) => r.forEach(
             (ele) => {
                 if (ele.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)) {
-                    container.appendChild(montacard(ele));
-                }
-                if (ele.posicao.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(campo_valor)) {
                     container.appendChild(montacard(ele));
                 }
             }
