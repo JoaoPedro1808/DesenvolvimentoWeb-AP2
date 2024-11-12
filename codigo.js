@@ -34,6 +34,7 @@ const montacard = (atleta) =>{
     const cartao = document.createElement("article");
     const nome = document.createElement("h1");
     const imagem = document.createElement("img");
+    const posicao = document.createElement("p")
 
     nome.innerHTML = atleta.nome;
     nome.style.fontFamily = 'sans-serif'
@@ -41,6 +42,10 @@ const montacard = (atleta) =>{
 
     imagem.src = atleta.imagem;
     cartao.appendChild(imagem);
+
+    posicao.innerHTML = atleta.posicao;
+    posicao.style.fontFamily = 'sans-serif'
+    cartao.appendChild(posicao);
 
     cartao.onclick = manipulaClick;
     cartao.dataset.id = atleta.id;

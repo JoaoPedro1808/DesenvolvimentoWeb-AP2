@@ -11,31 +11,42 @@ html{
 
 #container > article{
     width: 20rem;
-    border: solid black;
-    border-radius: 5px;
+    border: 5px solid black;
+    border-radius: 10px;
     margin: .5rem;
     padding: .3rem;
-    background-color: black;
+    background-color: white;
 }
 
 p{
-    color: white;
+    color: black;
+    font-family: 'rockwell';
 }
 
 h1{
-    color: white;
+    color: black;
+    font-family: 'rockwell';
 }
 
 #container img{
     width: 100%;
+    border-radius: 4px;
 }
 
 #titulo{
     color: black;
     text-align: center;
     align-items: center;
-    margin-top: 28vh;
+    margin-top: 20vh;
     font-size: 50px;
+}
+
+#botao{
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    height: 3.4vh;
+    font-family: 'rockwell';
 }
 
 #p1{
@@ -54,12 +65,68 @@ h1{
 #senha{
     width: 30vw;
     height: 3.2vh;
-    border-radius: 3em;
-    border: none;
+    border-radius: 4px;
+    border: 1px solid white;
 }
 
-#botao{
-    color: white;
-    background-color: black;
-    border-radius: 3em;
+#pagina-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
 }
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
+
+#pesquisa {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.botoes-principais {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-family: 'rockwell';
+}
+
+#logout{
+    padding: 10px 20px;
+    position: absolute;
+    top: 7%;
+    right: 4vw;
+    margin-top: -1vh;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    font-family: 'rockwell';
+    border-radius: 4px;
+}
+
+#titulo2{
+    position: absolute;
+    top: 7%;
+    left: 4vw;
+    margin-top: -1vh;
+    font-family: 'rockwell';
+    border-radius: 4px;
+}
+
