@@ -8,10 +8,13 @@ html{
     margin: 0% auto;
     margin-left: 2.6vw;
     transition: 0.3 ease;
+    max-width: 1400px;
+    justify-content: center;
+    align-items: center;
 }
 
 #container > article{
-    width: 20rem;
+    width: 85%;
     border: 5px solid black;
     border-radius: 10px;
     margin: .5rem;
@@ -97,8 +100,8 @@ h1{
     flex-direction: column;
     align-items: center;
     gap: 10px; 
-    margin-bottom: 20px; 
-    margin-top: 41px;
+    margin-bottom: 30px;
+    margin-top: 40px;
 }
 
 #pesquisa {
@@ -179,9 +182,20 @@ h1{
     }
 }
 
-@media screen and (max-width: 768px) {
-    .botoes-principais{
-        align-items: center;
-        flex-direction: column;
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #container > article {
+        width: calc(100% / 4 - 1rem);
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1300px) {
+    #container > article {
+        width: calc(100% / 5 - 1rem);
+    }
+}
+
+@media screen and (min-width: 1301px) {
+    #container > article {
+        width: calc(100% / 6 - 1rem);
     }
 }
