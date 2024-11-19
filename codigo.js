@@ -145,6 +145,25 @@ const manipulaBotao = () => {
     }
 };
 
+const selecionador = document.getElementById('seletor-principal')
+
+selecionador.onchange = () => {
+    if(selecionador.value === 'masculino') {
+        limparcontainer()
+        jogadores_masculinos()
+    };
+
+    if(selecionador.value === 'femenino') {
+        limparcontainer()
+        jogadoras_femininos()
+    };
+
+    if (selecionador.value === 'all') {
+        limparcontainer()
+        todo()
+    };
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     if (sessionStorage.getItem('logado') === 'sim') {
         document.getElementById("pagina-principal").style.display = "block";

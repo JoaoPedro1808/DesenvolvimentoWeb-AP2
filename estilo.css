@@ -3,7 +3,7 @@ html{
 }
 
 #container{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     margin: 0% auto;
     margin-left: 2.6vw;
@@ -135,6 +135,24 @@ h1{
     background-color: white;
 }
 
+#seletor-principal{
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-family: 'rockwell';
+    transition: 0.3s ease;
+}
+
+#seletor-principal:hover{
+    color: black;
+    background-color: white;
+}
+
 #logout{
     padding: 10px 20px;
     position: absolute;
@@ -180,22 +198,46 @@ h1{
         height: 8vh;
         font-size: x-large;
     }
-}
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    #container > article {
-        width: calc(100% / 4 - 1rem);
+    .botoes-principais{
+        display: none;
+    }
+
+    #seletor-principal{
+        display: flex;
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1300px) {
-    #container > article {
-        width: calc(100% / 5 - 1rem);
+@media screen and (min-width: 769px) {
+    .botoes-principais {
+        display: flex;
+    }
+
+    #seletor-principal {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    #container{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
 @media screen and (min-width: 1301px) {
-    #container > article {
-        width: calc(100% / 6 - 1rem);
+    #container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 }
