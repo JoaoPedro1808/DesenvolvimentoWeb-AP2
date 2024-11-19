@@ -6,7 +6,6 @@ html{
     display: grid;
     flex-wrap: wrap;
     margin: 0% auto;
-    margin-left: 2.6vw;
     transition: 0.3 ease;
     max-width: 1400px;
     justify-content: center;
@@ -21,6 +20,8 @@ html{
     padding: .3rem;
     background-color: white;
     transition: 0.3 ease;
+    justify-content: center;
+    align-items: center;
 }
 
 #container > article:hover{
